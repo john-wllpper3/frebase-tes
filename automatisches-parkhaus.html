@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Automatisches Parkhaus
+    </title>
+    <style>:root{--border-radius:5px;--box-shadow:2px 2px 10px;--color:#118bee;--color-accent:#118bee15;--color-bg:#fff;--color-bg-secondary:#e9e9e9;--color-secondary:#0645AD;--color-secondary-accent:#920de90b;--color-shadow:#f4f4f4;--color-text:#000;--color-text-secondary:#999;--font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;--hover-brightness:1.2;--justify-important:center;--justify-normal:left;--line-height:1.5;--width-card:285px;--width-card-medium:460px;--width-card-wide:800px;--width-content:1080px}article aside{background:var(--color-secondary-accent);border-left:4px solid var(--color-secondary);padding:.01rem .8rem}body{background:var(--color-bg);color:var(--color-text);font-family:var(--font-family);line-height:var(--line-height);margin:0;overflow-x:hidden;padding:1rem 0}footer,header,main{margin:0 auto;max-width:var(--width-content);padding:0rem 1rem}hr{background-color:var(--color-bg-secondary);border:none;height:1px;margin:4rem 0}section{display:flex;flex-wrap:wrap;justify-content:var(--justify-important)}section aside{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);margin:1rem;padding:1.25rem;width:var(--width-card)}section aside:hover{box-shadow:var(--box-shadow) var(--color-bg-secondary)}section aside img{max-width:100%}[hidden]{display:none}article header,div header,main header{padding-top:0}header{text-align:var(--justify-important)}header a b,header a em,header a i,header a strong{margin-left:.5rem;margin-right:.5rem}header nav img{margin:1rem 0}section header{padding-top:0;width:100%}nav{align-items:center;display:flex;font-weight:700;justify-content:space-between;margin-bottom:7rem}nav ul{list-style:none;padding:0}nav ul li{display:inline-block;margin:0 .5rem;position:relative;text-align:left}nav ul li:hover ul{display:block}nav ul li ul{background:var(--color-bg);border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);display:none;height:auto;left:-2px;padding:.5rem 1rem;position:absolute;top:1.7rem;white-space:nowrap;width:auto}nav ul li ul li,nav ul li ul li a{display:block}code,samp{background-color:var(--color-accent);border-radius:var(--border-radius);color:var(--color-text);display:inline-block;margin:0 .1rem;padding:0 .5rem}details{margin:1.3rem 0}details summary{font-weight:700;cursor:pointer}h1,h2,h3,h4,h5,h6{line-height:var(--line-height)}mark{padding:.1rem}ol li,ul li{padding:.2rem 0}p{margin:.75rem 0;padding:0}pre{margin:1rem 0;max-width:var(--width-card-wide);padding:1rem 0}pre code,pre samp{display:block;max-width:var(--width-card-wide);padding:.5rem 2rem;white-space:pre-wrap}small{color:var(--color-text-secondary)}sup{background-color:var(--color-secondary);border-radius:var(--border-radius);color:var(--color-bg);font-size:xx-small;font-weight:700;margin:.2rem;padding:.2rem .3rem;position:relative;top:-2px}a{color:var(--color-secondary);display:inline-block;text-decoration:none}a:hover{filter:brightness(var(--hover-brightness));text-decoration:underline}a b,a em,a i,a strong,button{border-radius:var(--border-radius);display:inline-block;font-size:medium;font-weight:700;line-height:var(--line-height);margin:.5rem 0;padding:1rem 2rem}button{font-family:var(--font-family)}button:hover{cursor:pointer;filter:brightness(var(--hover-brightness))}a b,a strong,button{background-color:var(--color);border:2px solid var(--color);color:var(--color-bg)}a em,a i{border:2px solid var(--color);border-radius:var(--border-radius);color:var(--color);display:inline-block;padding:1rem}figure{margin:0;padding:0}figure img{max-width:100%}figure figcaption{color:var(--color-text-secondary)}button:disabled,input:disabled{background:var(--color-bg-secondary);border-color:var(--color-bg-secondary);color:var(--color-text-secondary);cursor:not-allowed}button[disabled]:hover{filter:none}form{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);box-shadow:var(--box-shadow) var(--color-shadow);display:block;max-width:var(--width-card-wide);min-width:var(--width-card);padding:1.5rem;text-align:var(--justify-normal)}form header{margin:1.5rem 0;padding:1.5rem 0}input,label,select,textarea{display:block;font-size:inherit;max-width:var(--width-card-wide)}input[type=checkbox],input[type=radio]{display:inline-block}input[type=checkbox]+label,input[type=radio]+label{display:inline-block;font-weight:400;position:relative;top:1px}input,select,textarea{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);margin-bottom:1rem;padding:.4rem .8rem}input[readonly],textarea[readonly]{background-color:var(--color-bg-secondary)}label{font-weight:700;margin-bottom:.2rem}table{border:1px solid var(--color-bg-secondary);border-radius:var(--border-radius);border-spacing:0;display:inline-block;max-width:100%;overflow-x:auto;padding:0;white-space:nowrap}table td,table th,table tr{padding:.4rem .8rem;text-align:var(--justify-important)}table thead{background-color:var(--color);border-collapse:collapse;border-radius:var(--border-radius);color:var(--color-bg);margin:0;padding:0}table thead th:first-child{border-top-left-radius:var(--border-radius)}table thead th:last-child{border-top-right-radius:var(--border-radius)}table thead th:first-child,table tr td:first-child{text-align:var(--justify-normal)}table tr:nth-child(even){background-color:var(--color-accent)}blockquote{display:block;font-size:x-large;line-height:var(--line-height);margin:1rem auto;max-width:var(--width-card-medium);padding:1.5rem 1rem;text-align:var(--justify-important)}blockquote footer{color:var(--color-text-secondary);display:block;font-size:small;line-height:var(--line-height);padding:1.5rem 0} article{padding: 1.25rem;}.v-cover{height: 480px; object-fit: cover;width: 100vw;cursor: pointer;}.v-image{height: 250px; object-fit: cover;width: 100vw;cursor: pointer;}.dwn-cover{max-height: 460px; object-fit: cover;}.w-100{width: 100vw}.search-box{color:#333;background-color:#f5f5f5;width:85%;height:50px;padding:0 20px;border:none;border-radius:20px;outline:0;border:1px solid #002cd92e}.search-box:active,.search-box:focus,.search-box:hover{border:1px solid #d9008e}.btn{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:transparent;border:1px solid transparent;border-top-color:transparent;border-right-color:transparent;border-bottom-color:transparent;border-left-color:transparent;padding:.375rem .75rem;margin:0.5rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out}.btn-danger{color:#fff;background-color:#dc3545;border-color:#dc3545}.btn-success{color:#fff;background-color:#28a745;border-color:#28a745}.btn-group-sm>.btn,.btn-sm{padding:.25rem .5rem;font-size:.875rem;line-height:1.5;border-radius:.2rem}
+</style>
+	<script type="application/ld+json">
+{
+  "@context": "https://schema.org/", 
+  "@type": "Article", 
+  "author": {
+    "@type": "Person",
+    "name": "Jorge Jr"
+  },
+  "headline": "Automatisches Parkhaus",
+  "datePublished": "2021-05-27",
+  "image": "https://i.pinimg.com/originals/61/8f/4e/618f4e8f2f02d65bb5040dfcc316ef67.png",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Plomberie",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://via.placeholder.com/512.png?text=automatisches+parkhaus",
+      "width": 512,
+      "height": 512
+    }
+  }
+}
+</script>
+	<!-- Head tag Code --></head>
+<body>
+    <header>
+        <h1>
+            <a href="/">
+            Automatisches Parkhaus
+            </a>
+        </h1>
+        <p>
+                            Ce site Web vous aide à trouver des solutions aux problèmes de drainage.
+                    </p>
+        <center>
+            <input class='search-box' id="search-box" placeholder='Search and hit enter..' type='text' name="q" required autocomplete="off" id="search-query">
+            <div class="d-block p-4">
+	<center>
+		<!-- TOP BANNER ADS -->
+	</center>
+</div>        </center>
+    </header>
+    <main>
+        <article>
+    <p><strong>Automatisches Parkhaus</strong>. Vor und auch in diesem Jahr zeigte sich wieder dass dieses Thema zunehmend interessanter wird. Derzeit stehen 249 elektronische Parkpltze zur.</p>
+            <figure>
+        <img class="v-cover ads-img" src="https://i.pinimg.com/originals/ce/1d/a5/ce1da5d98acf4a35355fb735073cbc2b.jpg" alt="Mittels Eines Elektromotors Werden Die Auf Schienen Fahrenden Park Paletten Per Knopfdruck Langs Verschoben Und Geben So D Elektro Motor Elektromotor Parkplatz" style="width: 100%; padding: 5px; background-color: grey;"  onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9pm7bKxP94QnmtN3ggQmX_Kmlv4Zba_MxYAk_YDzW82rxrRJyf758FZm_8oF3C3mVDsA';">
+        <figcaption>Mittels Eines Elektromotors Werden Die Auf Schienen Fahrenden Park Paletten Per Knopfdruck Langs Verschoben Und Geben So D Elektro Motor Elektromotor Parkplatz from www.pinterest.com</figcaption>
+    </figure>
+        <p>
+        Es ist eng man muss erst mal einen Parkplatz finden und dann ewig Treppen laufen oder auf den Lift warten. Zustzliche Einrichtungen wie beispielsweise eine Tankstelle eine Autowaschanlage eine Paktstation oder kleine Geschfte knnen zustzlich die Attraktivitt des Parkhauses und auch die Rendite erhhen. Parkhuser sind fr viele ein Albtraum.
+    </p>
+    <h3>Vor und auch in diesem Jahr zeigte sich wieder dass dieses Thema zunehmend interessanter wird.</h3>
+    <p>Zustzliche Einrichtungen wie beispielsweise eine Tankstelle eine Autowaschanlage eine Paktstation oder kleine Geschfte knnen zustzlich die Attraktivitt des Parkhauses und auch die Rendite erhhen. Obwohl durch dieses komplexere Bauen die Parkhaus-Kosten zunchst hher werden kann sich dies lngerfristig betrachtet gut amortisieren. Alle Vollautomaten in der bersicht. Roboter steuern darin die Autos schnell und unfallfrei.</p>
+</article>
+
+<section>
+
+    <aside>
+        <img class="v-image ads-img" alt="Gallery Of Neubau Parkhaus Sma Hhs Planer Architekten Ag 5 Parkhaus Architekt Neubau" src="https://i.pinimg.com/originals/5c/7f/a3/5c7fa30723a5ef025f603d2c2d2a6ee4.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaWd3VBVE2JbnK-C-sJSOOCbw-HDgNKF91hWlAkQUXbcz0nZuO_92ZPT2p1wQ_G9aaUEo';" />
+        <small>Source: pt.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Alle Stapel- sowie Liftparker knnen sowohl in Einzel- Fertigteil- Tief- und oberirdischen Garagen als auch in Garagensystemen eingesetzt werden.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Entwasserung Fur Parkhauser In 2021 Haus Parkhaus Entwasserungslosungen" src="https://i.pinimg.com/474x/31/1b/57/311b5736635aac77e2003f83bd564b7d.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs_wOfjGdPmBL0A7592hDjWwPL5gUTMwPcMTw8yV-uijlcAWCGFrhZvdfbUa4v0Pc6cOc';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>4122012 Deutschlands grtes ffentliches vollautomatisches Parkhaus ist online.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Holzparkhaus Der Firma Cotra Ag In Studen Ch Parkhaus Sicherung Leitplanke" src="https://i.pinimg.com/originals/ca/c1/2a/cac12a3e98f9ae087c0a195d83c5df89.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg2RPyxjA10lGH6dyRJacWv5DkCVZROJHo_nlKVkq4yIYnjIDlre36RFOARlGhW-Mq4zk';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Das automatische Fahrradparksystem der Bikesafe lagert Fahrrder und E-bikes sicher und kompakt in einen Turm-Parkhaus unterirdisch in einem Schacht oder in einer kombination aus Turm-Schacht.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Right On So Many Levels Innovative Car Park Design Moderne Architektur Architekturmodell Architektur" src="https://i.pinimg.com/originals/3e/67/7b/3e677bda558724e002e62b8e87dcbe2f.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR2TWF1QEnFCVWbLW26ouyGcpNCubP_R0IMldsptaiwM5Dq2QwSr89UB00elQf5ex6Km0';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Automatisches Parkhaus - DirectPark GmbH Wo sich Autos stapeln In Dresden steht das grte vollautomatische Parkhaus Westeuropas auf nur 635 Quadratmetern.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Avantgarde Serie 242 Depot Als Paketfachanlage Kunden Die Bei Der Lehrter Parkhaus Gesellschaft Dauer Oder Park And Ride Platze Parkhaus Paketkasten Haus" src="https://i.pinimg.com/736x/8c/b4/a6/8cb4a68695b3152ae29e9ba26f8084f8.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPjPqSRCTLgxZwCCtcKJZ8MAZxNoyUlXPUw5bSL_gMIN4RTuff86tvtiIs7CXJ5aDgkOg';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>10 compared to an open parking area 17 compared to a multi-storey car park with 2 floors 115 compared to a.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Burda Parkhaus Werner Sobek Parkhaus Park Haus" src="https://i.pinimg.com/originals/81/cd/ab/81cdabedc48f14bce36ea77c3d9b5644.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRG6wzz6SGQ_VjZwnLJEGJGgmY0XI4ETj8106Ggl8_A_sDTgNVa1k9FvSxkLNa0feWEN0';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Das vollautomatische System bietet Sicherheit.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Parkhaus Anlage In Munchen Riem Filigrane Rampen Eingehangt Zwischen Den Drei Schiffen Parkhaus Flachdach Fassade" src="https://i.pinimg.com/originals/62/75/5c/62755c3a77741ac0fc28140fcd23aa26.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnrw24MC7dJ60CCSHuwH818cBHVcRa7AMVc5x2V8ytTHlGKtLDeaNwtIQvRnTV9OOqzkw';" />
+        <small>Source: de.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Alle Vollautomaten in der bersicht.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="We Brought A Solution For This Problem By Offering Fully Automated Parking Systems Our Parking Systems Are Packed With Latest Technologies Addre Parkplatz Park" src="https://i.pinimg.com/originals/27/98/32/279832bdb54b4bf5dab264bbc127ad79.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsIt-4X8MWQiN-HdYK6DziG49gyifwT1ewN_QS25KhqdY2D5a9I4xshdHpSJSY3aTT4gw';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Alle Stapel- sowie Liftparker knnen sowohl in Einzel- Fertigteil- Tief- und oberirdischen Garagen als auch in Garagensystemen eingesetzt werden.</p>
+    </aside>
+
+    <aside>
+        <img class="v-image ads-img" alt="Mittels Eines Elektromotors Werden Die Auf Schienen Fahrenden Park Paletten Per Knopfdruck Langs Verschoben Und Geben So D Elektro Motor Elektromotor Parkplatz" src="https://i.pinimg.com/originals/ce/1d/a5/ce1da5d98acf4a35355fb735073cbc2b.jpg" width="100%" onerror="this.onerror=null;this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9pm7bKxP94QnmtN3ggQmX_Kmlv4Zba_MxYAk_YDzW82rxrRJyf758FZm_8oF3C3mVDsA';" />
+        <small>Source: www.pinterest.com</small>
+                        <center>
+                <button class="btn btn-sm btn-success ads-img">Check Details</button>
+            </center>
+                    <p>Obwohl durch dieses komplexere Bauen die Parkhaus-Kosten zunchst hher werden kann sich dies lngerfristig betrachtet gut amortisieren.</p>
+    </aside>
+</section>
+<section>
+    <article>
+        <p>
+                                
+                            <a href="/jordanien-wandern-in-der-wueste.html"><i>&larr; jordanien wandern in der wueste</i></a>
+                                                                    
+                                        <a href="/luftbefeuchter-und-luftreiniger-in-einem.html"><i>luftbefeuchter und luftreiniger in einem &rarr;</i></a>
+                                        </p>
+    </article>
+</section>
+		<center>
+			<div class="d-block p-4">
+	<center>
+		<!-- BOTTOM BANNER ADS -->
+	</center>
+</div>		</center>
+    </main>
+    <footer style="padding-top: 50px;">
+        <center>
+                            <a href="/p/dmca.html">Dmca</a>
+                            <a href="/p/contact.html">Contact</a>
+                            <a href="/p/privacy-policy.html">Privacy Policy</a>
+                            <a href="/p/copyright.html">Copyright</a>
+                    </center>
+    </footer>
+    <!-- Histats.com  (div with counter) --><div id="histats_counter"></div>
+<!-- Histats.com  START  (aync)-->
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4550379,4,1,120,40,00010100']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4550379&101" alt="counter hit make" border="0"></a></noscript>
+<!-- Histats.com  END  -->            <script type="text/javascript">
+        window.onload = function() {
+            var v_images = document.getElementsByClassName('ads-img');
+            for(var i = 0; i < v_images.length; i++) {
+                var v_img = v_images[i];
+                v_img.onclick = function() {
+                    window.open('https://www.achievablecpmrevenue.com/w4cv6agf?key=67b97f670ac94da11cbf9b0990a19d51', '_blank');
+                }
+            }
+        }
+    </script>
+        <script type="text/javascript">
+        var search = document.getElementById("search-box");
+        search.addEventListener("keyup", function(event) {
+            event.preventDefault();
+            if (event.keyCode === 13) {
+                var target = 'site:'+location.host+' '+search.value;
+                var uri= 'https://www.google.com/search?q='+encodeURIComponent(target);
+                window.location= uri;
+            }
+        });
+    </script>
+</body>
+
+</html>
